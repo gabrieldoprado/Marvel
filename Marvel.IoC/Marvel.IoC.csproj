@@ -8,8 +8,4 @@
     <PackageReference Include="SimpleInjector" Version="4.4.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-  </ItemGroup>
-
 </Project>

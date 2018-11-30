@@ -8,7 +8,7 @@ namespace Marvel.IoC
 {
     public class Resolver
     {
-        private readonly Container Container;
+        private static Container Container { get; set; }
 
         public Resolver()
         {
@@ -17,17 +17,21 @@ namespace Marvel.IoC
             Container.Verify();
         }
 
+        public static Resolver RegistryDependency()
+        {
+            return new Resolver();
+        }
+
         private void RegisterContainers()
         {
             //Register Domains
-            //Container.Register<ITeste, Teste>();
+            //Container.Register<ITeste, Teste>(Lifestyle.Transient);
         }
 
-        public T Get<T>() where T : class
+        public static T Get<T>() where T : class
         {
             if (Container == null) throw new InvalidOperationException("Cannot resolve dependencies before the container has been initialized.");
             return Container.GetInstance<T>();
         }
     }
-}
 }

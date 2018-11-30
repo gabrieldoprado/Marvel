@@ -17,4 +17,8 @@
     <Folder Include="Interfaces\" />
     <Folder Include="View\" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Marvel.IoC\Marvel.IoC.csproj" />
+  </ItemGroup>
 </Project>

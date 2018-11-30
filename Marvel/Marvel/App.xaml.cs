@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Marvel.IoC;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Marvel
@@ -10,7 +11,7 @@ namespace Marvel
         public App()
         {
             InitializeComponent();
-
+            Resolver.RegistryDependency();
             MainPage = new MainPage();
         }
 

@@ -1,19 +1,16 @@
 ﻿using SimpleInjector;
-using SimpleInjector.Lifestyles;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Marvel.IoC
 {
-    public class Resolver
+    public partial class Resolver
     {
         private static Container Container { get; set; }
 
         public Resolver()
         {
             Container = new Container();
-            RegisterContainers();
+            RegistryContainers();
             Container.Verify();
         }
 
@@ -22,10 +19,12 @@ namespace Marvel.IoC
             return new Resolver();
         }
 
-        private void RegisterContainers()
+        private void RegistryContainers()
         {
-            //Register Domains
-            //Container.Register<ITeste, Teste>(Lifestyle.Transient);
+            ContainerModel();
+            ContainerBusiness();
+            ContainerServices();
+            ContainerDataAccess();
         }
 
         public static T Get<T>() where T : class

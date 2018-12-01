@@ -3,7 +3,7 @@
   <Identity Name="028ae360-e8f8-45b5-9888-9e52a7127dff" Publisher="CN=cad98ccc-f16c-4523-9461-6ff1f8fef1e4" Version="1.0.0.0" />
   <mp:PhoneIdentity PhoneProductId="ec0cc741-fd3e-485c-81be-68815c480690" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>Marvel.UWP</DisplayName>
+    <DisplayName>Marvel</DisplayName>
     <PublisherDisplayName>cad98ccc-f16c-4523-9461-6ff1f8fef1e4</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
